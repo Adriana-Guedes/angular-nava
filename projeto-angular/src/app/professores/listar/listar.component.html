@@ -25,8 +25,9 @@
           <button class="btn btn-outline-info"
           [routerLink]="['/professores/editar', p.id]">Editar</button>
 
+               <!--( ! ) Non-null Assertion Operato, ELE FORÇA PEGAR O VALOR QUE É INFORMADO DENTRO   -->
           <button class="btn btn-outline-danger"
-              (click)="onDelete(p.id)">Deletar</button>
+              (click)="onDelete(p.id!)">Deletar</button>
       </td>
 
     </tr>

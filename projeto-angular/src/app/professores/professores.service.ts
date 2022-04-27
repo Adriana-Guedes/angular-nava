@@ -1,3 +1,4 @@
+import { ProfessoresModel } from './professores.models';
 import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
@@ -11,11 +12,11 @@ export class ProfessoresService {
   constructor(private httpClient: HttpClient) { }
 
   getAll() {
-    return this.httpClient.get('http://localhost:8080/professores');
+    return this.httpClient.get<ProfessoresModel[]>('http://localhost:8080/professores');
   }
 
-  save(professorObj : any) {
-    return this.httpClient.post('http://localhost:8080/professores', professorObj);
+  save(professorObj : ProfessoresModel) {
+    return this.httpClient.post<ProfessoresModel>('http://localhost:8080/professores', professorObj);
   }
 
   delete(id : number) {
@@ -23,10 +24,10 @@ export class ProfessoresService {
   }
 
   getOne(id : number) {
-    return this.httpClient.get(`http://localhost:8080/professores/${id}`);
+    return this.httpClient.get<ProfessoresModel>(`http://localhost:8080/professores/${id}`);
   }
 
-  update(id : number, professorObj:any) {
-    return this.httpClient.patch(`http://localhost:8080/professores/${id}`, professorObj);
+  update(id : number, professorObj:ProfessoresModel) {
+    return this.httpClient.patch<ProfessoresModel>(`http://localhost:8080/professores/${id}`, professorObj);
 }
 }
