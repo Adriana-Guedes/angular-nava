@@ -1,0 +1,88 @@
+
+
+<div class="container">
+  <ul class="nav nav-pills nav-fill justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/']"
+        routerLinkActive="active"  [routerLinkActiveOptions]="{exact:true}" aria-current="page" >Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/professores']"
+      routerLinkActive="active" >Professores</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/formularios/reativo-form']"
+      routerLinkActive="active" >Formulários</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled">Disabled</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
+
+
+
+
+<!--REALIZANDO PROPETY BINDING  TRAZENDO DO TYPSCRIPT PARA HTML DO PROPRIO COMPONENT-->
+
+
+
+
+<!--
+<h1>Componente Root</h1>
+<p> Interpolação: {{ title }} </p> -->
+
+<!-- MANUSEIO DE STYLO-->
+<!-- DIRETO NA TAG-->
+<!-- <p style="background-color: yellow;">
+  Empresa: {{ empresa }}
+</p> -->
+
+
+
+
+
+<!-- EVENTOS SIMBOLIZADO POR ( )-->
+<!-- EVENT BINDING  É AO CONTRARIO, DO HTML P CSS-->
+<!-- <P>
+  <button (click)="clicar()"> Clique aqui</button>
+</P> -->
+
+
+
+
+
+<!--PROPERTY BINDING + EVENT BINDING // (keyup)  QUANDO FOR DIGITADO ELE IRA RECEBER OS DADOS -->
+<!--<p>
+  <input type="text" [value]="empresa" (keyup)="getTextoDigitado(empresaInput)" #empresaInput>
+</p>
+<input type="text"> -->
+
+
+
+<!--2 WAY DATABINGING [(ngModel)]="nome-variavel" ele realiza a mesma coisa acima-->
+<!-- <p>
+<input class="form-control" type="text"[(ngModel)]="empresa">
+</p> -->
+
+
+   <!--A VARIAVEL DO COMPONENTE FILHO VAI RECEBER A VARIAVEL DO COMPONENTE PAI ATRAVEZ DO PROPERTY BINDING-->
+<!-- <app-listar [empresaFilho]="empresa"> </app-listar>
+
+
+<div class="row" style="background-color: gray;">
+  <div class="col">
+    Column
+  </div>
+  <div class="col">
+    Column
+  </div>
+  <div class="col">
+    Column
+  </div>
+</div> -->
