@@ -8,7 +8,7 @@ import { ListarComponent } from './listar/listar.component';
 const routes: Routes = [
   {path: 'professores', component: ListarComponent},
   {path: 'professores/criar', component: ProfessorFormComponent},
-  {path: 'professores/id', component: ListarComponent} // ROTA DINAMICA
+  {path: 'professores/editar/:id', component: ProfessorFormComponent} // ROTA DINAMICA
 
 
 ];
